@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      colors: {
+        'app-bistre': '#3C2922',
+        'app-cinereous': '#83766E',
+        'app-alabaster': '#F0ECE2',
+        'app-timberwolf': '#E0DCD3',
+        'app-darkblue': '#006ba6',
+        'app-lightblue': '#0496ff',
+        'app-orange': '#ffbc42',
+        'app-red': '#d81159',
+        'app-darkred': '#8f2d56',
+        'app-lightgreen': '#87c38f',
+        'app-darkgreen': '#226f54',
+        'white': '#fff',
+        'black': '#000',
+      },
+      theme: {
+        fontFamily: {
+          "signika": ["Signika Variable"],
+          "arima": ["Arima Variable"],
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @font-face {
+      font-family: "Arima Variable";
+      font-style: normal;
+      font-display: swap;
+      font-weight: 100 700;
+      src: url(https://cdn.jsdelivr.net/fontsource/fonts/arima:vf@latest/latin-wght-normal.woff2) format("woff2-variations");
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    @font-face {
+      font-family: "Signika Variable";
+      font-style: normal;
+      font-display: swap;
+      font-weight: 300 700;
+      src: url(https://cdn.jsdelivr.net/fontsource/fonts/signika:vf@latest/latin-wght-normal.woff2) format("woff2-variations");
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Arima Variable";
+    }
+
+  </style>
+  <title>Document</title>
+</head>
+
+<body class="font-arima">
+  <div class="mx-auto bg-gray-800 rounded-lg shadow my-[4em] w-[900px] min-h-[80vh] p-[2em] text-white">
+    <div class="text-center">
+      <h1 class="font-signika text-2xl mt-4 mb-1">Gregory's First Springboot App</h1>
+      <i class="opacity-35">with the help of @cheonglol</i>
+    </div>
+    <form method="post" action="/login" class="my-[2em] p-4 rounded-lg bg-gray-700 pb-[4em] w-fit mx-auto">
+      <div class="flex flex-col space-y-2 w-[300px]">
+        <label class="pt-2">Account ID</label>
+        <input class="text-black pt-2 pb-1 px-4 rounded-lg" type="text" />
+        <label class="pt-2">Action</label>
+        <select class="text-black pt-2 pb-1 px-4 rounded-lg">
+          <option value="volvo">Deposit</option>
+          <option value="saab">Withdraw</option>
+        </select>
+        <label class="pt-2">Amount ($)</label>
+        <input class="text-black pt-2 pb-1 px-4 rounded-lg" type="number" />
+      </div>
+      <button class="bg-green-700 mt-8 p-4 rounded-lg shadow active:bg-green-800 w-fit mx-auto">Send to
+        Springboot</button>
+    </form>
+  </div>
+</body>
+
+</html>
